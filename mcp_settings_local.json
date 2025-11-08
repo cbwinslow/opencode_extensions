@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "local-filesystem": {
+      "command": "python3",
+      "args": [
+        "local_mcp_servers/filesystem_server.py"
+      ],
+      "env": {}
+    },
+    "local-memory": {
+      "command": "python3",
+      "args": [
+        "local_mcp_servers/memory_server.py"
+      ],
+      "env": {}
+    },
+    "local-git": {
+      "command": "python3",
+      "args": [
+        "local_mcp_servers/git_server.py"
+      ],
+      "env": {}
+    }
+  }
+}
