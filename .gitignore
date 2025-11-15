@@ -285,3 +285,9 @@ extensions/systemprompt-code-orchestrator/
 # Test artifacts
 test-results/
 test-reports/
+# Multi-agent system data
+chroma_data/
+vector_data/
+test_chroma/
+hierarchical_memory.db
+*.db

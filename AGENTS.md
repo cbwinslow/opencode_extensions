@@ -4,22 +4,28 @@
 
 - **Run all tests**: `python3 cli.py test` or `python3 agents/tester.py`
 - **Run single test**: `python3 -m pytest path/to/test_file.py` (for Python) or `npm test -- path/to/test_file.js` (for JavaScript)
+- **Multi-agent tests**: `python3 test_multiagent.py`
 - **Code review**: `python3 cli.py review <file_path>` or `python3 agents/code_reviewer.py <file_path>`
 - **Validate OpenAPI**: `python3 cli.py validate_openapi <spec_file>`
 - **Memory management**: `python3 cli.py memory <action>` or `python3 cli.py hierarchical_memory <action>`
 - **Token management**: `python3 cli.py foss_token <action>`
 - **Code analysis**: `python3 cli.py analyze_code <action>`
 - **Project creation**: `python3 cli.py create_project <action>`
+- **Vector database**: `python3 cli.py vector_db <action>`
+- **Agent communication**: `python3 cli.py agent_comm <action>`
+- **Multi-agent system**: `python3 cli.py multiagent <action>`
 
 ## FOSS-First Policy
 
 This project exclusively uses Free and Open Source Software (FOSS). All integrations, tools, and dependencies are open source.
 
 ### Supported FOSS Services
-- **Communication**: Mattermost, Matrix (self-hosted)
+- **Communication**: Mattermost, Matrix (self-hosted), Redis (BSD)
 - **Project Management**: Redmine, Gitea (self-hosted)
 - **Note-taking**: Nextcloud Notes (self-hosted)
 - **AI/ML**: Ollama (local models), Llama2, Mistral, CodeLlama
+- **Vector Databases**: ChromaDB (Apache 2.0), Qdrant (Apache 2.0), Weaviate (BSD)
+- **Embeddings**: sentence-transformers (Apache 2.0)
 - **Authentication**: Local encrypted token storage
 
 ### Forbidden Proprietary Services
