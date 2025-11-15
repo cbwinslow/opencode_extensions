@@ -4,14 +4,26 @@ A comprehensive ecosystem of tools, plugins, and extensions for OpenCode - the A
 
 ## 🚀 Overview
 
-This repository contains **42+ components** organized into 6 main categories:
+This repository contains **50+ components** organized into 6 main categories:
 
-- 🤖 **Agents** (3): Code Reviewer, Tester, Deployer
-- 🛠️ **Tools** (7): Memory management, Code analysis, Project templates
+- 🤖 **Agents** (4): Code Reviewer, Tester, Deployer, **Multi-Agent Coordinator**
+- 🛠️ **Tools** (9): Memory management, Code analysis, **Vector Database**, **Agent Communication**
 - 🌐 **MCP Servers** (23+): Local and cloud Model Context Protocol servers
 - 📦 **Extensions** (6): Downloaded and configured extensions
 - 🔗 **Integrations** (3): External service integrations
 - ⚙️ **Configs** (3): Configuration and security tools
+
+## ✨ NEW: Multi-Agent Democratic Problem Solving
+
+**Cutting-edge multi-agent AI system** based on academic research in distributed decision-making:
+
+- 🧠 **Vector Databases**: ChromaDB, Qdrant, Weaviate for semantic knowledge storage
+- 💬 **Redis Communication**: Democratic coordination between autonomous agents
+- 🗳️ **6 Problem-Solving Strategies**: Voting, Consensus, Auction, Swarm, Debate, Hierarchical
+- 🤝 **5 Agent Roles**: Problem-Solver, Monitor, Note-Taker, Healer, Coordinator
+- 📚 **Academic Foundation**: Based on 2024-2025 research in multi-agent systems
+
+See [MULTIAGENT_GUIDE.md](MULTIAGENT_GUIDE.md) for complete documentation.
 
 ## 🎯 Key Features
 
@@ -86,6 +98,8 @@ opencode_extensions/
 ## 🎮 Usage
 
 ### CLI Commands
+
+#### Traditional Commands
 ```bash
 # Code review
 python3 cli.py review path/to/file.py
@@ -101,6 +115,30 @@ python3 local_mcp_servers.py test
 
 # Token management
 python3 cli.py foss_token store github "your_token"
+```
+
+#### NEW: Multi-Agent Commands
+```bash
+# Run full multi-agent demonstration
+python3 demo_multiagent.py
+
+# Vector database operations
+python3 cli.py vector_db init chromadb
+python3 cli.py vector_db ingest document.txt
+python3 cli.py vector_db search "semantic query"
+python3 cli.py vector_db stats
+
+# Agent communication
+python3 cli.py agent_comm register agent1 problem_solver
+python3 cli.py agent_comm vote "Proposal" "yes,no,abstain"
+python3 cli.py agent_comm status
+python3 cli.py agent_comm health
+
+# Multi-agent problem solving
+python3 cli.py multiagent demo
+python3 cli.py multiagent spawn 5
+python3 cli.py multiagent solve "Optimize code" voting
+python3 cli.py multiagent status
 ```
 
 ### TUI Navigation

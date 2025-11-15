@@ -9,7 +9,7 @@ def run_command(cmd):
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Usage: python cli.py <command> [args...]")
-        print("Commands: review, test, deploy, validate_openapi, fetch_data, convert_format, handle_webhook, automate, manage_linear, get_token, foss_token, memory, analyze_code, create_project, memory_config, hierarchical_memory")
+        print("Commands: review, test, deploy, validate_openapi, fetch_data, convert_format, handle_webhook, automate, manage_linear, get_token, foss_token, memory, analyze_code, create_project, memory_config, hierarchical_memory, vector_db, agent_comm, multiagent")
         sys.exit(1)
     command = sys.argv[1]
     args = sys.argv[2:]
@@ -45,5 +45,11 @@ if __name__ == "__main__":
         run_command(f"python tools/hierarchical_memory.py {' '.join(args)}")
     elif command == "foss_token":
         run_command(f"python configs/foss_token_manager.py {' '.join(args)}")
+    elif command == "vector_db":
+        run_command(f"python tools/vector_database.py {' '.join(args)}")
+    elif command == "agent_comm":
+        run_command(f"python tools/agent_communication.py {' '.join(args)}")
+    elif command == "multiagent":
+        run_command(f"python agents/multiagent_coordinator.py {' '.join(args)}")
     else:
         print(f"Unknown command: {command}")
