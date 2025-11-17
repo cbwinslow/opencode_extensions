@@ -1,0 +1,29 @@
+# Core dependencies for opencode_extensions
+
+# Vector databases (FOSS)
+chromadb>=0.4.0  # Apache 2.0 license - default vector DB
+qdrant-client>=1.7.0  # Apache 2.0 license - alternative vector DB
+weaviate-client>=3.25.0  # BSD license - alternative vector DB
+
+# Embeddings (FOSS)
+sentence-transformers>=2.2.0  # Apache 2.0 license - for local embeddings
+
+# Communication & coordination
+redis>=5.0.0  # BSD license - agent communication
+
+# Data processing
+numpy>=1.24.0
+pandas>=2.0.0
+
+# HTTP & APIs
+requests>=2.31.0
+
+# CLI & utilities
+python-dotenv>=1.0.0
+
+# Encryption (for token management)
+cryptography>=41.0.0
+
+# Optional: LLM integration (commented out - install if needed)
+# openai>=1.0.0  # For OpenRouter integration
+# anthropic>=0.5.0  # Alternative LLM provider
